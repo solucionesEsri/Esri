@@ -8,3 +8,4 @@ Esri 2017 Developer Summit Pre-Conference Workshop
 ### Documentation
 * Xamarin Developer Home - https://developer.xamarin.com/
 * ArcGIS Runtime SDK for .NET - https://developers.arcgis.com/net/
+* ArcGIS Sample Code - https://github.com/ClassroomCode/Esri
