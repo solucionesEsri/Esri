@@ -25,7 +25,8 @@ namespace Northwinder
         public async void OnSaveClicked(object sender, EventArgs e)
         {
             SaveButton.IsEnabled = false;
-            await _repository.SaveProduct(_product);
+            bool b = await _repository.SaveProduct(_product);
+            if (!b) await DisplayAlert("Error", "Unable to save product", "OK");
             await Navigation.PopModalAsync();
         }
     }
