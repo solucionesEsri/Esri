@@ -5,7 +5,7 @@
   <StackLayout Margin="40, 0, 0, 0">
     <Editor Text="{Binding Name}" HorizontalOptions="Center" />
     <Editor Text="{Binding Package}" HorizontalOptions="Center" />
-    <Button x:Name="SaveButton" Text="Save" />
+    <Button x:Name="SaveButton" Text="Save" Clicked="OnSaveClicked" />
     <Button x:Name="CancelButton" Text="Cancel" />
   </StackLayout>
 </ContentPage>

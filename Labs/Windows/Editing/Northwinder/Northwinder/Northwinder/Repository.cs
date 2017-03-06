@@ -31,5 +31,18 @@ namespace Northwinder
             }
             return retVal;
         }
+
+        public async Task<bool> SaveProduct(Product product)
+        {
+            var retVal = false;
+            var client = new HttpClient();
+
+            var address = $"{url}/{product.Id}";
+            var payload = JsonConvert.SerializeObject(product);
+
+            //var response = await client.PutAsync(address, new StringContent(payload, Encoding.UTF8, "application/json"));
+
+            return true;
+        }
     }
 }
