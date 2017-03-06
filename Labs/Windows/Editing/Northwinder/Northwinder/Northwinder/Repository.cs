@@ -31,5 +31,17 @@ namespace Northwinder
             }
             return retVal;
         }
+
+        public async Task<bool> SaveProduct(Product product)
+        {
+            var client = new HttpClient();
+
+            var address = $"https://svc.treeloop.com/api/product/{product.Id}";
+            var payload = JsonConvert.SerializeObject(product);
+
+            var response = await client.PutAsync(address, new StringContent(payload, Encoding.UTF8, "application/json"));
+
+            return (response.IsSuccessStatusCode);
+        }
     }
 }
